@@ -1,0 +1,64 @@
+<main class="mylist-page container-fluid">
+
+<div class="row mylist-row">
+
+<div class="list-sidebar active" id="list-sidebar-wrapper">
+	<i class="fas fa-bars" id="sidebar-toggle"></i>
+	<div id="list-sidebar">
+		<h3>Choose Category</h3>
+		<ul id="categories">
+			<li id="category-all" class="active">
+				<a onclick='showItems("All")'>
+					<i class="fas fa-clipboard-list sidebar-icon"></i>
+					<span class="sidebar-category">All</span>
+				</a>
+			</li>
+			<li id="category-pending">
+				<a onclick='showItems("Pending")'>
+					<i class="fas fa-bullseye sidebar-icon"></i>
+					<span class="sidebar-category">Pending</span>
+				</a>
+			</li>
+			<li id="category-done">
+				<a onclick='showItems("Done")'>
+					<i class="fas fa-check-square sidebar-icon"></i>
+					<span class="sidebar-category">Done</span>
+				</a>
+			</li>
+			<li id="category-deleted">
+				<a onclick='showItems("Deleted")'>
+					<i class="fas fa-times-circle sidebar-icon"></i>
+					<span class="sidebar-category">Deleted</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="list-div" id="list-div">
+
+	<ul id="list">
+		{{!-- <li id="1" class="allowChange"><span class="content">Create a new webpage</span><span class="edit"><i class="fas fa-edit"></i></span><span class="cross"><i class="fas fa-times-circle"></i></span></li>
+		<li id="2" class="allowChange checked"><span class="content">Learn HTML</span><span class="edit"><i class="fas fa-edit"></i></span><span class="cross"><i class="fas fa-times-circle"></i></span></li>
+		<li id="3" class="allowChange"><span class="content">Learn CSS</span><span class="edit"><i class="fas fa-edit"></i></span><span class="cross"><i class="fas fa-times-circle"></i></span></li>
+		<li id="4" class="allowChange"><span class="content">Learn JavaScript</span><span class="edit"><i class="fas fa-edit"></i></span><span class="cross"><i class="fas fa-times-circle"></i></span></li>
+		<li id="5" class="allowChange"><span class="content">Learn NodeJs</span><span class="edit"><i class="fas fa-edit"></i></span><span class="cross"><i class="fas fa-times-circle"></i></span></li> --}}
+	</ul>
+
+	<div class="lds-ellipsis" id="loader"><div></div><div></div><div></div><div></div></div>
+
+	<div class="list-new" id="addNew">
+		<input type="text" id="list-new-input" placeholder="Add new item...">
+		<span onclick="addElement()" id="list-new-button" class="addBtn">Add</span>
+	</div>
+
+</div>
+
+</div>
+
+</main>
+
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/mylist.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/loader.css">
+<script type="text/javascript" src="/javascripts/mylist.js"></script>
